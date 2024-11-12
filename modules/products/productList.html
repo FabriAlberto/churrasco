@@ -1,0 +1,86 @@
+<section class="products w-100 px-5 pt-5 d-flex flex-column align-items-center">
+    <div class="w-100 d-flex justify-content-between flex-wrap">
+        <h2 class="text-white">Products</h2>
+        <div
+            class="col-lg-3 col-md-4 col-sm-6 col-12 input_custom_container d-flex gap-2 px-2 align-items-center rounded text-secondary">
+            <i class="bi bi-search"></i>
+            <input class="border-0 input_custom rounded-end bg-transparent text-white w-100" placeholder="Search"
+            data-bind="textInput: search" />
+        </div>
+    </div>
+    <div data-bind="if: isLoading" class="loading-component w-100 d-flex justify-content-center align-items-center">
+        <article class="text-center">
+            <div class="spinner-border text-white" role="status" style="width: 3rem; height: 3rem">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="text-white">Loading products...</p>
+        </article>
+    </div>
+
+    <!-- CARD -->
+    <div class="d-flex flex-wrap space-2 products_container col-lg-10 col-md-11 col-12 mt-3"
+        data-bind="foreach: productsFiltered">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 card_container p-2">
+            <article class="card shadow card_container_card bg-transparent text-white">
+                <div class="card-carrousel " data-bind="visible: pictures && pictures.length > 1">
+                    <div class="carousel slide h-100"
+                        data-bind="attr: { id: 'carousel-' + $index() }, css: { active: pictures.length > 1 }"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner h-100" data-bind="foreach: pictures">
+                            <div class="carousel-item h-100 " data-bind="css: { active: $index() === 0 }">
+                                <img class="card-img-top h-100 carousel w-full" data-bind="attr: { src: $data }" />
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bind="attr: { 'data-bs-target': '#carousel-' + $index() }" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bind="attr: { 'data-bs-target': '#carousel-' + $index() }" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <img class="card-img-top w-full"
+                    data-bind="visible: pictures.length === 1, attr: { src: pictures[0] , alt: name}" />
+                <img class="card-img-top w-full" data-bind="visible: !pictures || pictures.length === 0"
+                    src="https://www.mon-site-bug.fr/uploads/products/default-product.png" />
+
+                <div class="card-body pt-2">
+                    <b class="card-text text-primary-pink-light m-0" data-bind="if: $data.price !== undefined">
+                        $<span data-bind="text: price"></span>
+                    </b>
+                    <h5 class="card-title m-0" data-bind="text: name"></h5>
+                    <p class="card-text" data-bind="if: $data.description !== undefined">
+                        <span class="text-description m-0" data-bind="text: description"></span>
+                    </p>
+                </div>
+                
+               <div class="rounded p-2 d-flex justify-content-end ">
+                <button class="btn bg-primary-pink" title="Add to car">
+                    <i class="bi bi-cart-plus-fill text-white"></i>
+                </button>
+               </div>
+            </article>
+        </div>
+    </div>
+    <!-- UTILITIES -->
+    <div class="d-flex w-100 flex-column align-items-center mt-4" data-bind="if: !isLoading() && productsFiltered().length > 0">
+        <b class="text-white">Mostrando
+            <span data-bind="text: productsFiltered().length"></span>
+            de
+            <span class="text-white" data-bind="text: totalProducts"></span>
+        </b>
+
+        <button class="btn btn-primary-pink mt-1"
+            data-bind="visible: !isLoading() && totalProducts() > productsFiltered().length, click: ()=>handleShowMore()">
+            Show More
+        </button>
+    </div>
+    <div class="w-100 mt-5 d-flex justify-content-center" data-bind="if: !isLoading() && productsFiltered().length===0">
+        <p class="text-white h4">Products not found</p>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$primary: #352f6d;
+$secondary: #b3b3b3;
+$primary-pink: #da1b37;
+$primary-pink-light: #ff6a80c7;
+$success:#6bf1a3;
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success
+  )
+);
+$custom-colors: (
+  "light-primary": #49409a,
+  "primary-pink": $primary-pink,
+  "primary-pink-light": $primary-pink-light
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+label{
+  font-size: 14px;
+  
+}
+textarea{
+  resize: none;
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "./common.scss";
+@import "./login.scss";
+@import "./products.scss";
+@import "./new-product.scss";

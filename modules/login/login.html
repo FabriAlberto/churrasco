@@ -1,0 +1,29 @@
+<section class=" h-100 login_container d-flex flex-column align-items-center ">
+  <img src="/public/assets/logo.png" alt="Logo" class="login_container_logo mt-5" />
+
+  <form data-bind="submit: login" class="login_container_form col-md-4 col-sm-10 col-11">
+    <div class="mt-4 input_container d-flex bg-white p-3 rounded-top text-secondary ">
+      <i class="bi bi-person-fill"></i>
+      <input class="border-0 input_container_input w-100" id="username" placeholder="Username"
+        data-bind="value: username" required />
+    </div>
+
+    <div class="input_container d-flex bg-white p-3 rounded-bottom text-secondary">
+      <i class="bi bi-lock-fill"></i>
+      <input class="border-0 input_container_input w-100" type="password" id="password" placeholder="Password"
+        data-bind="value: password" required />
+    </div>
+    <p class="text-danger mt-2" data-bind="text: errorMessage"></p>
+    <article class="d-flex justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-secondary" for="flexCheckDefault">
+          remember
+        </label>
+      </div>
+      <button type="submit" data-bind="disable: isLoading"
+        class="btn btn-light-primary mt-2">Log in</button>
+    </article>
+
+  </form>
+</section>

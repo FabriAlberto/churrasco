@@ -1,0 +1,28 @@
+.products{
+  background-color:#282D4E;
+  min-height:  90vh;
+  &_container{
+    .card_container{
+      &_card{
+        height: 350px;
+        .text-description{
+          font-size: 14px;
+        }
+        .card-carrousel{
+          height: 50%;
+        }
+      }
+    }
+  }
+}
+
+.card-img-top {
+  height: 50%;
+  object-fit: cover;
+  border-bottom: 1px solid #ffffff25;
+}
+.card-img-top .carousel {
+  height: 100%;
+  object-fit: contain;
+  border-bottom: 1px solid #ffffff25;
+}

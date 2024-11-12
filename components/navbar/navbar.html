@@ -1,0 +1,23 @@
+<nav class="navbar  shadow px-5 py-0 w-100" id="navbar">
+  <div class=" d-flex align-items-center justify-content-between w-100  navbar_container">
+
+    <a class="navbar-brand d-flex" href="#">
+      <img src="/assets/logo_white.svg" alt="churrasco-icon" width="25">
+      <p class="text-white text_icon ">
+        HURRASC<span class="text_icon_letter">O</span>
+      </p>
+    </a>
+
+    <div class="d-flex  align-items-center">
+      <div class=" d-flex navbar_container_items align-items-center gap-3" data-bind="foreach: items">
+        <a class="items_menu  p-2" data-bind="attr: { href: path }, text: title, css: { menu_active: path === $root.activeItem } ">
+        </a>
+      </div>
+
+      <p class="text-white m-0 mx-4 bg-primary-pink logout-button p-1 px-2 rounded" title="Logout" data-bind="click: logout">
+        <i class="bi bi-box-arrow-right text-white  h5 "></i>
+      </p>
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,77 @@
+<section class="create_product w-100 px-5 pt-5 d-flex flex-column align-items-center">
+    <div class="w-100 d-flex justify-content-between flex-wrap">
+        <h2 class="text-white">Create product</h2>
+
+    </div>
+    <form data-bind="submit: addProduct" class="w-100 d-flex flex-wrap ">
+        <section class="col-md-6 col-12 p-2">
+            <div class="col-12 d-flex flex-wrap ">
+                <div class="col-md-6 col-12 px-2">
+                    <label class="form-label text-secondary">SKU</label>
+                    <input class="form-control bg-transparent text-white " data-bind="value: product().sku"
+                        required></input>
+                </div>
+                <div class="col-md-6 col-12 px-2">
+                    <label class="form-label text-secondary">Code</label>
+                    <input class="form-control bg-transparent text-white " type="number"
+                        data-bind="value: product().code" required></input>
+                </div>
+            </div>
+
+            <div class=" px-2">
+                <label class="form-label text-secondary">Name</label>
+                <input type="text" class="form-control bg-transparent text-white " data-bind="value: product().name"
+                    required>
+            </div>
+            <div class=" px-2">
+                <label class="form-label text-secondary">Description</label>
+                <textarea class="form-control bg-transparent text-white" rows="4"
+                    data-bind="value: product().description" style="resize: none;" required></textarea>
+            </div>
+            <div class="col-12 d-flex flex-wrap ">
+                <div class="col-md-6 col-12 px-2">
+                    <label class="form-label text-secondary">Price</label>
+                    <input type="number" class="form-control bg-transparent text-white "
+                        data-bind="value: product().price" required>
+                </div>
+                <div class="col-md-6 col-12 px-2">
+                    <label class="form-label text-secondary">Currency</label>
+                    <input class="form-control bg-transparent text-white " data-bind="value: product().currency"
+                        required></input>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="col-md-6 col-12 p-2 d-flex flex-column justify-content-start align-items-center">
+            <label class="form-label text-secondary w-100">Product images</label>
+            <div class=" upload_image_container col-md-10 col-12  shadow rounded  "
+                data-bind="visible: product().imagesUrls.length === 0, click: ()=> uploadImages()">
+                <i class="bi bi-cloud-arrow-up text-primary-pink-light"></i>
+                <p class="text-white mb-0">Upload Images</p>
+                <b class="text-white"> Click here </b>
+            </div>
+            <div class="text-white"> 
+            <button class="btn btn-primary-pink  gap-2 p-1 px-2 mb-2 " style="display: flex;" data-bind="visible: product().imagesUrls.length > 0 , click: ()=> uploadImages()">
+                <i class="bi bi-cloud-arrow-up text-white h5 mb-0 "></i>
+                <p class="text-white mb-0">  Upload images</p>
+            </button>    
+            </div>
+            <div class="col-12 h-100  flex-wrap container_preview_images "
+                data-bind="visible: product().imagesUrls.length > 0 , foreach: product().imagesUrls">
+                <div class="p-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="product_image_container">
+                        <i class="bi bi-trash product_image_container_delete rounded text-white"
+                            data-bind="click: ()=> $root.removeImage($data)"></i>
+                        <img data-bind="attr: { src: $data, alt: name } " class="product_image_container_img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" px-2 w-100 d-flex justify-content-start gap-2">
+            <button class="btn btn-transparent text-white border border-white mt-5"
+                data-bind="click: cancel, disable: isLoading">Cancel</button>
+            <button type="submit" class="btn btn-primary-pink mt-5" data-bind="disable: isLoading">Create</button>
+        </section>
+    </form>
+    </div>

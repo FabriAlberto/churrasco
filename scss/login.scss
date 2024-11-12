@@ -1,0 +1,18 @@
+.login_container {
+  min-height: 100vh;
+  background: rgb(53,47,109);
+  background: linear-gradient(180deg, rgba(53,47,109,1) 55%, rgba(32,28,70,1) 97%);
+  &_logo {
+    width: 200px;
+  }
+  &_form {
+    .input_container {
+      &_input {
+        &:focus {
+          outline: none;
+        }
+      }
+
+    }
+  }
+}

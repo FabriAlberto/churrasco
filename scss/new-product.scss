@@ -1,0 +1,39 @@
+.create_product{
+  background-color:#282D4E;
+  min-height: 90vh;
+}
+.upload_image_container{
+  height: 300px;
+  cursor: pointer;
+  background-color: #222746ce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .bi-cloud-arrow-up{
+    font-size: 50px;
+  }
+}
+.product_image_container{
+  max-width: 200px;
+  height: 150px;
+  position: relative;
+  border: 1px solid $primary;
+  &_img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  } 
+  &_delete{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    padding: 1px 3px;
+    background-color: map-get($map: $theme-colors, $key: "primary-pink"); 
+  }
+}
+.container_preview_images{
+  display: flex;
+  flex-wrap: wrap;
+}
