@@ -1,23 +1,30 @@
-<nav class="navbar  shadow px-5 py-0 w-100" id="navbar">
-  <div class=" d-flex align-items-center justify-content-between w-100  navbar_container">
-
+<nav class="navbar navbar-expand-lg px-4">
+  <div class="container-fluid navbar_container">
     <a class="navbar-brand d-flex" href="#">
       <img src="/assets/logo_white.svg" alt="churrasco-icon" width="25">
       <p class="text-white text_icon ">
         HURRASC<span class="text_icon_letter">O</span>
       </p>
     </a>
-
-    <div class="d-flex  align-items-center">
-      <div class=" d-flex navbar_container_items align-items-center gap-3" data-bind="foreach: items">
-        <a class="items_menu  p-2" data-bind="attr: { href: path }, text: title, css: { menu_active: path === $root.activeItem } ">
-        </a>
+    <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 w-100 mb-lg-0 d-flex justify-content-end" data-bind="foreach: items">
+        <li class="nav-item">
+          <a class="nav-link active text-white fw-bolder "
+            data-bind="attr: { href: path }, text: title, css: { menu_active: path === $root.activeItem } "
+            aria-current="page"></a>
+        </li>
+      </ul>
+      <div class="nav-item">
+        <p class=" text-white mb-0 mx-md-4 mx-0 mt-md-0 mt-5 bg-primary-pink logout-button rounded" title="Logout"
+        data-bind="click: logout">
+        <i class="bi bi-box-arrow-right text-white"></i>
+        </p>
       </div>
-
-      <p class="text-white m-0 mx-4 bg-primary-pink logout-button p-1 px-2 rounded" title="Logout" data-bind="click: logout">
-        <i class="bi bi-box-arrow-right text-white  h5 "></i>
-      </p>
-
     </div>
   </div>
-</nav>
+</nav>  

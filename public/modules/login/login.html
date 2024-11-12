@@ -22,7 +22,16 @@
         </label>
       </div>
       <button type="submit" data-bind="disable: isLoading"
-        class="btn btn-light-primary mt-2">Log in</button>
+        class="btn btn-light-primary mt-2 text-white d-flex align-items-center"> 
+        Login
+        <div data-bind="if: isLoading" class="loading-component w-100 d-flex justify-content-center align-items-center">
+          <article class="text-center">
+              <div class="spinner-border text-white" role="status" style="width: 1rem; height: 1rem">
+                  <span class="visually-hidden">Loading...</span>
+              </div>
+          </article>
+      </div>
+      </button>
     </article>
 
   </form>

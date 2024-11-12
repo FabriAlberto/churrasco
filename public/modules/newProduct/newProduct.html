@@ -47,7 +47,7 @@
             <label class="form-label text-secondary w-100">Product images</label>
             <div class=" upload_image_container col-md-10 col-12  shadow rounded  "
                 data-bind="visible: product().imagesUrls.length === 0, click: ()=> uploadImages()">
-                <i class="bi bi-cloud-arrow-up text-primary-pink-light"></i>
+                <i class="bi bi-cloud-arrow-up text-primary-pink "></i>
                 <p class="text-white mb-0">Upload Images</p>
                 <b class="text-white"> Click here </b>
             </div>
@@ -71,7 +71,16 @@
         <section class=" px-2 w-100 d-flex justify-content-start gap-2">
             <button class="btn btn-transparent text-white border border-white mt-5"
                 data-bind="click: cancel, disable: isLoading">Cancel</button>
-            <button type="submit" class="btn btn-primary-pink mt-5" data-bind="disable: isLoading">Create</button>
+            <button type="submit" class="btn btn-primary-pink mt-5 text-white d-flex align-items-center gap-2" data-bind="disable: isLoading">Create
+
+                <div data-bind="if: isLoading" class="loading-component w-100 d-flex justify-content-center align-items-center">
+                    <article class="text-center">
+                        <div class="spinner-border text-white" role="status" style="width: 1rem; height: 1rem">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </article>
+                </div>
+            </button>
         </section>
     </form>
     </div>

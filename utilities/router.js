@@ -8,9 +8,10 @@ class Router {
     constructor() {
         this.routesMenu = [
             { path: `#${VIEWS.PRODUCTS}`, title: "Products" },
-            { path: `#${VIEWS.NEW_PRODUCT}`, title: "+ New Product" }
+            { path: `#${VIEWS.NEW_PRODUCT}`, title: "Create product" }
         ];
         this.appContainer = $("#app");
+        
         this.viewMap = VIEW_MAP
         window.addEventListener('hashchange', this.handleRouteChange.bind(this));
         
@@ -42,12 +43,13 @@ class Router {
           try {
               ko.cleanNode(this.appContainer[0]);
               ko.applyBindings(viewModel(), this.appContainer[0]);
+              /* this.document.title= `Churrasco|${config.title}`; */
           } catch (error) {
               console.error("Error applying Knockout bindings:", error);
           }
       });
+      
   }
-
     push(view) {
         window.location.hash = `#${view}`;
     }

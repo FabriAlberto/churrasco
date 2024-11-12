@@ -3,6 +3,8 @@ import { VIEWS } from "../../../utilities/enum.js";
 import { router } from "../../../utilities/router.js";
 import { createProduct } from "../../../services/api.service.js";
 import Toastify from "toastify-js";
+import { productSchema } from "../../schemas/newProduct.js";
+import * as Yup from "yup";
 
 export class NewProductViewModel {
   constructor() {
@@ -27,31 +29,36 @@ export class NewProductViewModel {
 
   async addProduct() {
     this.isLoading(true);
-    const { name, description, sku, code, price, imagesUrls, currency } =
-      this.product();
+    try {
+      await productSchema.validate(this.product(), { abortEarly: false });
+      const { name, description, sku, code, price, imagesUrls, currency } =
+        this.product();
 
-    const res = await createProduct({
-      name,
-      description,
-      SKU: sku,
-      code,
-      price,
-      pictures: imagesUrls,
-      currency,
-    });
-
-    this.showToast(
-      res.success ? "Product added successfully" : "Error adding product",
-      res.success
-    );
-
-    if (res.success) {
-      router.push(VIEWS.PRODUCTS);
-    } else {
-      console.log(res.errorMessage);
+      const res = await createProduct({
+        name,
+        description,
+        SKU: sku,
+        code,
+        price,
+        pictures: imagesUrls,
+        currency,
+      });
+      this.showToast(
+        res.success ? "Product added successfully" : "Error adding product",
+        res.success
+      );
+      if (res.success) {
+        router.push(VIEWS.PRODUCTS);
+      } else {
+        console.log(res.errorMessage);
+      }
+    } catch (error) {
+      if (error instanceof Yup.ValidationError) {
+        error.inner.forEach((err) => this.showToast(err.message, false));
+      }
+    } finally {
+      this.isLoading(false);
     }
-
-    this.isLoading(false);
   }
 
   showToast(message, success) {

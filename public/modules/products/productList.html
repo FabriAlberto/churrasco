@@ -21,7 +21,7 @@
     <div class="d-flex flex-wrap space-2 products_container col-lg-10 col-md-11 col-12 mt-3"
         data-bind="foreach: productsFiltered">
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 card_container p-2">
-            <article class="card shadow card_container_card bg-transparent text-white">
+            <article class="card p-2 shadow card_container_card  text-white">
                 <div class="card-carrousel " data-bind="visible: pictures && pictures.length > 1">
                     <div class="carousel slide h-100"
                         data-bind="attr: { id: 'carousel-' + $index() }, css: { active: pictures.length > 1 }"
@@ -59,11 +59,11 @@
                     </p>
                 </div>
                 
-               <div class="rounded p-2 d-flex justify-content-end ">
+               <!-- <div class="rounded p-2 d-flex justify-content-start ">
                 <button class="btn bg-primary-pink" title="Add to car">
                     <i class="bi bi-cart-plus-fill text-white"></i>
                 </button>
-               </div>
+               </div> -->
             </article>
         </div>
     </div>
@@ -75,7 +75,7 @@
             <span class="text-white" data-bind="text: totalProducts"></span>
         </b>
 
-        <button class="btn btn-primary-pink mt-1"
+        <button class="btn btn-primary-pink mt-1 text-white"
             data-bind="visible: !isLoading() && totalProducts() > productsFiltered().length, click: ()=>handleShowMore()">
             Show More
         </button>

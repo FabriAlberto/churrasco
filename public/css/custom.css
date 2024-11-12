@@ -12141,8 +12141,9 @@ textarea.form-control-lg {
   }
 }
 .navbar {
-  background: rgb(53, 47, 109);
-  background: linear-gradient(180deg, rgb(53, 47, 109) 55%, rgb(32, 28, 70) 97%);
+  background: #352f6d;
+  /*   background: linear-gradient(180deg, rgba(53,47,109,1) 55%, rgba(32,28,70,1) 97%);
+   */
 }
 .navbar_container .navbar-brand {
   padding: 10px;
@@ -12155,8 +12156,19 @@ textarea.form-control-lg {
   animation: light 0.7s ease-in-out 4;
 }
 
+.navbar-toggler-icon {
+  background-color: #fff !important;
+}
+
 .logout-button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+.logout-button .bi-box-arrow-right {
+  font-size: 20px;
 }
 
 .items_menu {
@@ -12225,13 +12237,14 @@ textarea.form-control-lg {
 }
 
 .products {
-  /* background-color:#141F31; */
-  background: rgb(20, 31, 49);
-  background: linear-gradient(180deg, rgb(20, 31, 49) 59%, rgb(59, 25, 135) 99%);
+  background: rgb(53, 47, 109);
+  background: linear-gradient(180deg, rgb(53, 47, 109) 0%, #6F0DC6 100%);
   min-height: 90vh;
 }
 .products_container .card_container_card {
-  height: 350px;
+  border-radius: 20px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1176470588);
 }
 .products_container .card_container_card .text-description {
   font-size: 14px;
@@ -12244,6 +12257,7 @@ textarea.form-control-lg {
   height: 50%;
   object-fit: cover;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1450980392);
+  border-radius: 20px;
 }
 
 .card-img-top .carousel {
@@ -12253,14 +12267,17 @@ textarea.form-control-lg {
 }
 
 .create_product {
-  background-color: #282D4E;
+  background: rgb(53, 47, 109);
+  /*   background: linear-gradient(180deg, rgba(53,47,109,1) 0%, rgba(32,28,70,1) 100%);
+   */
+  background: linear-gradient(180deg, rgb(53, 47, 109) 0%, #6F0DC6 100%);
   min-height: 90vh;
 }
 
 .upload_image_container {
   height: 300px;
   cursor: pointer;
-  background-color: rgba(34, 39, 70, 0.8078431373);
+  background-color: rgba(255, 255, 255, 0.1176470588);
   display: flex;
   flex-direction: column;
   justify-content: center;

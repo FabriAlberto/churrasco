@@ -1,11 +1,13 @@
 .create_product{
-  background-color:#282D4E;
+  background: rgb(53,47,109);
+/*   background: linear-gradient(180deg, rgba(53,47,109,1) 0%, rgba(32,28,70,1) 100%);
+ */ background: linear-gradient(180deg, rgba(53,47,109,1) 0%, #6F0DC6 100%);
   min-height: 90vh;
 }
 .upload_image_container{
   height: 300px;
   cursor: pointer;
-  background-color: #222746ce;
+  background-color:#ffffff1e;
   display: flex;
   flex-direction: column;
   justify-content: center;

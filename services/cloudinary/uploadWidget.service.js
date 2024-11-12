@@ -5,6 +5,7 @@ export const myWidget = (cb) =>
     {
       cloudName: config.cloudinary.cloudName,
       uploadPreset: config.cloudinary.uploadPreset,
+      clientAllowedFormats: ['jpg', 'png', 'gif', 'bmp', 'tiff', 'webp', 'heif']
     },
     (error, result) => {
       if (!error && result && result.event === "success") {

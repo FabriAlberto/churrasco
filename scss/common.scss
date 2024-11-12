@@ -1,7 +1,7 @@
 .navbar{
-  background: rgb(53,47,109);
-  background: linear-gradient(180deg, rgba(53,47,109,1) 55%, rgba(32,28,70,1) 97%);
-  &_container {
+  background: $primary;
+/*   background: linear-gradient(180deg, rgba(53,47,109,1) 55%, rgba(32,28,70,1) 97%);
+ */  &_container {
     .navbar-brand {
       padding: 10px;
       border-radius: 10px;
@@ -15,9 +15,19 @@
     
   }
 }
+.navbar-toggler-icon{
+  background-color:  #fff !important;
+}
 
 .logout-button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  .bi-box-arrow-right{
+    font-size: 20px;
+  }
 }
 
 .items_menu {
