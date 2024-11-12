@@ -1,5 +1,6 @@
-import { NavbarViewModel } from "../components/navbar/NavbarViewModel";
+import { NavbarViewModel } from "../public/components/navbar/NavbarViewModel";
 import { VIEWS } from "./enum";
+import $ from "jquery";
 
 export const loadNavbar = (view) => {
   const navbarContainer = $("#navbar");

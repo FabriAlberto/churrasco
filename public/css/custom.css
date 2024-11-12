@@ -52,7 +52,7 @@ textarea {
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-light-primary: #49409a;
-  --bs-primary-pink: #da1b37;
+  --bs-primary-pink: #FA2527;
   --bs-primary-pink-light: rgba(255, 106, 128, 0.7803921569);
   --bs-primary-rgb: 53, 47, 109;
   --bs-secondary-rgb: 179, 179, 179;
@@ -63,7 +63,7 @@ textarea {
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-light-primary-rgb: 73, 64, 154;
-  --bs-primary-pink-rgb: 218, 27, 55;
+  --bs-primary-pink-rgb: 250, 37, 39;
   --bs-primary-pink-light-rgb: 255, 106, 128;
   --bs-primary-text-emphasis: rgb(5.2, 44, 101.2);
   --bs-secondary-text-emphasis: rgb(43.2, 46.8, 50);
@@ -3140,20 +3140,20 @@ textarea.form-control-lg {
 }
 
 .btn-primary-pink {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #da1b37;
-  --bs-btn-border-color: #da1b37;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(185.3, 22.95, 46.75);
-  --bs-btn-hover-border-color: rgb(174.4, 21.6, 44);
-  --bs-btn-focus-shadow-rgb: 224, 61, 85;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(174.4, 21.6, 44);
-  --bs-btn-active-border-color: rgb(163.5, 20.25, 41.25);
+  --bs-btn-color: #000;
+  --bs-btn-bg: #FA2527;
+  --bs-btn-border-color: #FA2527;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(250.75, 69.7, 71.4);
+  --bs-btn-hover-border-color: rgb(250.5, 58.8, 60.6);
+  --bs-btn-focus-shadow-rgb: 213, 31, 33;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(251, 80.6, 82.2);
+  --bs-btn-active-border-color: rgb(250.5, 58.8, 60.6);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #da1b37;
-  --bs-btn-disabled-border-color: #da1b37;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #FA2527;
+  --bs-btn-disabled-border-color: #FA2527;
 }
 
 .btn-primary-pink-light {
@@ -3327,19 +3327,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary-pink {
-  --bs-btn-color: #da1b37;
-  --bs-btn-border-color: #da1b37;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #da1b37;
-  --bs-btn-hover-border-color: #da1b37;
-  --bs-btn-focus-shadow-rgb: 218, 27, 55;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #da1b37;
-  --bs-btn-active-border-color: #da1b37;
+  --bs-btn-color: #FA2527;
+  --bs-btn-border-color: #FA2527;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #FA2527;
+  --bs-btn-hover-border-color: #FA2527;
+  --bs-btn-focus-shadow-rgb: 250, 37, 39;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #FA2527;
+  --bs-btn-active-border-color: #FA2527;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #da1b37;
+  --bs-btn-disabled-color: #FA2527;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #da1b37;
+  --bs-btn-disabled-border-color: #FA2527;
   --bs-gradient: none;
 }
 
@@ -6974,7 +6974,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-primary-pink {
-  color: #fff !important;
+  color: #000 !important;
   background-color: RGBA(var(--bs-primary-pink-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -7069,8 +7069,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-primary-pink-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-primary-pink:hover, .link-primary-pink:focus {
-  color: RGBA(174, 22, 44, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(174, 22, 44, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(251, 81, 82, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(251, 81, 82, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-primary-pink-light {
@@ -12167,12 +12167,12 @@ textarea.form-control-lg {
   transition: all 0.2s ease-in-out;
 }
 .items_menu:hover {
-  background-color: #da1b37;
+  background-color: #FA2527;
   border-radius: 10px;
 }
 
 .menu_active {
-  border-bottom: 2px solid #da1b37;
+  border-bottom: 2px solid #FA2527;
 }
 
 .input_custom_container {
@@ -12225,7 +12225,9 @@ textarea.form-control-lg {
 }
 
 .products {
-  background-color: #282D4E;
+  /* background-color:#141F31; */
+  background: rgb(20, 31, 49);
+  background: linear-gradient(180deg, rgb(20, 31, 49) 59%, rgb(59, 25, 135) 99%);
   min-height: 90vh;
 }
 .products_container .card_container_card {
@@ -12285,7 +12287,7 @@ textarea.form-control-lg {
   right: 2px;
   cursor: pointer;
   padding: 1px 3px;
-  background-color: #da1b37;
+  background-color: #FA2527;
 }
 
 .container_preview_images {

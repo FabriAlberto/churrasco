@@ -1,5 +1,7 @@
 .products{
-  background-color:#282D4E;
+  /* background-color:#141F31; */
+  background: rgb(20,31,49);
+  background: linear-gradient(180deg, rgba(20,31,49,1) 59%, rgba(59,25,135,1) 99%);
   min-height:  90vh;
   &_container{
     .card_container{

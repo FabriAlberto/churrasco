@@ -1,18 +1,19 @@
 import { VIEWS } from "./enum";
-import { LoginViewModel } from "../modules/login/LoginViewModel.js";
-import { ProductListViewModel } from "../modules/products/ProductListViewModel.js";
-import { NewProductViewModel } from "../modules/newProduct/NewProductViewModel.js";
-export const VIEW_MAP= {
+import { ProductListViewModel } from "../public/modules/products/ProductListViewModel.js";
+import { NewProductViewModel } from "../public/modules/newProduct/NewProductViewModel.js";
+import { LoginViewModel } from "../public/modules/login/LoginViewModel.js";
+
+export const VIEW_MAP = {
   [VIEWS.LOGIN]: {
-      htmlFile: "modules/login/login.html",
-      viewModel: () => new LoginViewModel()
+    htmlFile: "/modules/login/login.html",
+    viewModel: () => new LoginViewModel(),
   },
   [VIEWS.PRODUCTS]: {
-      htmlFile: "modules/products/productList.html",
-      viewModel: () => new ProductListViewModel()
+    htmlFile: "/modules/products/productList.html",
+    viewModel: () => new ProductListViewModel(),
   },
   [VIEWS.NEW_PRODUCT]: {
-      htmlFile: "modules/newProduct/newProduct.html",
-      viewModel: () => new NewProductViewModel()
-  }
+    htmlFile: "/modules/newProduct/newProduct.html",
+    viewModel: () => new NewProductViewModel(),
+  },
 };

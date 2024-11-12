@@ -2,6 +2,7 @@ import { loadNavbar } from "./loadNavbar.js";
 import { VIEWS } from "./enum.js";
 import { AuthService } from "../services/auth.service.js";
 import { VIEW_MAP } from "./items.js";
+import $ from "jquery";
 
 class Router {
     constructor() {
@@ -13,7 +14,7 @@ class Router {
         this.viewMap = VIEW_MAP
         window.addEventListener('hashchange', this.handleRouteChange.bind(this));
         
-        $(document).ready(() => this.handleRouteChange());
+        $(()=>this.handleRouteChange());
     }
 
     handleRouteChange() {
@@ -33,7 +34,8 @@ class Router {
       if (!config) {
           console.error("View not recognized:", view);
           return;
-      }
+      } 
+      console.log(config)
       const { htmlFile, viewModel } = config;
 
       this.appContainer.load(htmlFile, () => {

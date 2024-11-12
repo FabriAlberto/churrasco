@@ -1,7 +1,7 @@
-import { getProducts } from "../../services/api.service.js";
-import { AuthService } from "../../services/auth.service.js";
-import { VIEWS } from "../../utilities/enum.js";
-import { router } from "../../utilities/router.js";
+import { getProducts } from "../../../services/api.service.js";
+import { AuthService } from "../../../services/auth.service.js";
+import { VIEWS } from "../../../utilities/enum.js";
+import { router } from "../../../utilities/router.js";
 
 export class ProductListViewModel {
   constructor() {
