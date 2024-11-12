@@ -2,6 +2,16 @@
 
 Este es un proyecto utilizando **Vite** como herramienta de desarrollo para una aplicación web con **VanillaJS**.
 
+## Tecnologías utilizadas 
+- Javascript
+- Knockout
+- Jquery
+- HTML
+- Css
+- Sass
+- Bootstrap
+- Yup  
+
 ## Requisitos
 
 Asegúrate de tener instalado lo siguiente antes de empezar:
