@@ -22,7 +22,7 @@ Asegúrate de tener instalado lo siguiente antes de empezar:
 3. Instala las dependencias:
    
    ```bash
-   Copiar código
+   npm install
 ## Levantar el Proyecto en Desarrollo
 
 Una vez que hayas instalado las dependencias, puedes levantar el servidor de desarrollo utilizando Vite.
