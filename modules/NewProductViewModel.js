@@ -1,9 +1,9 @@
-import { myWidget } from "../../../services/cloudinary/uploadWidget.service.js";
-import { VIEWS } from "../../../utilities/enum.js";
-import { router } from "../../../utilities/router.js";
-import { createProduct } from "../../../services/api.service.js";
+import { myWidget } from "../services/cloudinary/uploadWidget.service.js";
+import { VIEWS } from "../utilities/enum.js";
+import { router } from "../utilities/router.js";
+import { createProduct } from "../services/api.service.js";
 import Toastify from "toastify-js";
-import { productSchema } from "../../schemas/newProduct.js";
+import { productSchema } from "../schemas/newProduct.js";
 import * as Yup from "yup";
 
 export class NewProductViewModel {

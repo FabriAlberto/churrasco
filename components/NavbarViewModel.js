@@ -1,5 +1,5 @@
-import { AuthService } from "../../../services/auth.service";
-import { router } from "../../../utilities/router";
+import { AuthService } from "../services/auth.service";
+import { router } from "../utilities/router";
 
 export class NavbarViewModel {
   constructor() {

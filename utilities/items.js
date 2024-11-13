@@ -1,7 +1,7 @@
 import { VIEWS } from "./enum";
-import { ProductListViewModel } from "../public/modules/products/ProductListViewModel.js";
-import { NewProductViewModel } from "../public/modules/newProduct/NewProductViewModel.js";
-import { LoginViewModel } from "../public/modules/login/LoginViewModel.js";
+import { ProductListViewModel } from "/modules/ProductListViewModel.js";
+import { NewProductViewModel } from "/modules/NewProductViewModel.js";
+import { LoginViewModel } from "/modules/LoginViewModel.js";
 
 export const VIEW_MAP = {
   [VIEWS.LOGIN]: {

@@ -1,7 +1,7 @@
 
-import { router } from "../../../utilities/router.js";
-import { AuthService } from "../../../services/auth.service.js";
-import { VIEWS } from "../../../utilities/enum.js";
+import { router } from "../utilities/router.js";
+import { AuthService } from "../services/auth.service.js";
+import { VIEWS } from "../utilities/enum.js";
 export class LoginViewModel {
   constructor() {
     this.username = ko.observable("");

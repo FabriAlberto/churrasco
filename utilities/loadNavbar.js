@@ -1,4 +1,4 @@
-import { NavbarViewModel } from "../public/components/navbar/NavbarViewModel";
+import { NavbarViewModel } from "../components/NavbarViewModel";
 import { VIEWS } from "./enum";
 import $ from "jquery";
 
